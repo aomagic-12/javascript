@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取下拉列表选项中的value</title>
+</head>
+<body>
+    <select  id="province1" onchange="alert(this.value)">
+        <option value="">请在这里选择省份</option>
+        <option value="001">河南省</option>
+        <option value="002">河北省</option>
+        <option value="003">安徽省</option>
+        <option value="004">江苏省</option>
+    </select>
+
+
+    <select  id="province2" >
+        <option value="">请在这里选择省份</option>
+        <option value="001">河南省</option>
+        <option value="002">河北省</option>
+        <option value="003">安徽省</option>
+        <option value="004">江苏省</option>
+    </select>
+
+    <script>
+        window.onload = function(){
+            document.getElementById("province2").onchange = function(){
+                alert(this.value);
+            }
+        }
+    </script>
+</body>
+</html>

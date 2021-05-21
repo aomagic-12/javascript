@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: bisque;
+            border: 1px solid red;
+            width: 200px;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            document.getElementById("btn").onclick = function(){
+                var divObj = document.getElementById("div1");
+                divObj.innerHTML = "<font color = 'red'>用户名不能为空</font>"
+            }
+        }
+    </script>
+    <input type="button" value="设置div中的内容" id="btn">
+
+    <div id="div1">
+    </div>
+    <span id="span1"></span>
+</body>
+</html>

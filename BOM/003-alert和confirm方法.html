@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert和confirm方法</title>
+</head>
+<body>
+    <script>
+        function hallo(){
+            window.alert("hallo world")
+        }
+
+        function del(){
+            var ok = window.confirm("是否确认删除？")
+            if(ok){
+                window.alert("数据正在删除，请稍后...")
+            }
+        }
+    </script>
+
+    <input type="button" value="hallo" onclick="hallo()" >
+    <input type="button" value="删除" onclick="del()">
+</body>
+</html>

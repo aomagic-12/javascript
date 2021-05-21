@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var firstChkElt = document.getElementById("firstChk");
+            var aihaos = document.getElementsByName("aihao");
+            firstChkElt.onclick = function(){
+                for(var i=0;i<aihaos.length;i++){
+                    aihaos[i].checked = firstChkElt.checked;
+                }
+            }
+            for(var i=0;i<aihaos.length;i++){
+                aihaos[i].onclick = function(){
+                    var cont1 = aihaos.length;
+                    var cont2 = 0;
+                    for(var i=0;i<aihaos.length;i++){
+                        if(aihaos[i].checked){
+                            cont2++;
+                        }
+                    }
+                    if(cont2==cont1){
+                        firstChkElt.checked=true;
+                    }
+                    else{
+                        firstChkElt.checked=false;
+                    }
+                }
+            }
+        }
+    </script>
+
+    <input type="checkbox" id="firstChk">
+    <br>
+    <input type="checkbox" name="aihao" value="smoke">抽烟
+    <br>
+    <input type="checkbox" name="aihao" value="drink">喝酒
+    <br>
+    <input type="checkbox" name="aihao" value="firehair">烫头
+    <br>
+
+</body>
+</html>
